@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Single Tab Enforcer",
+  "version": "1.1",
+  "description": "Allow only one YouTube tab at a time.",
+  "permissions": ["tabs"],
+  "host_permissions": [
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "YouTube Tab Manager"
+  }
+}
