@@ -4,12 +4,16 @@
   "version": "1.1",
   "description": "Allow only one YouTube tab at a time.",
   "permissions": ["tabs"],
-  "host_permissions": [
-    "*://*.youtube.com/*"
-  ],
+  "host_permissions": ["*://*.youtube.com/*"],
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "css": ["grayscale.css"]
+    }
+  ],
   "action": {
     "default_title": "YouTube Tab Manager"
   }

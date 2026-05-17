@@ -1,0 +1,3 @@
+html, body {
+  filter: grayscale(75%) !important;
+}
